@@ -1,8 +1,22 @@
 import React from "react";
-
+import AddPc from "./pages/AddPc";
+import PcList from "./pages/PcList";
 export class Pc extends React.Component {
   state = {
     page: "list",
+  };
+
+  renderPage = () => {
+    if (this.state.page === "list") {
+      return <PcList />;
+    } else if (this.state.page === "addpc") {
+      return <AddPc />;
+    }
+  };
+  switchPage = (newPage) => {
+    this.setState({
+      page: newPage,
+    });
   };
   render() {
     return (
@@ -11,17 +25,29 @@ export class Pc extends React.Component {
           <div className="container-fluid">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/#">
+                <a
+                  className="nav-link"
+                  href="/#"
+                  onClick={() => {
+                    this.switchPage("list");
+                  }}
+                >
                   PC
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/#">
+              <li className="nav-item">
+                <a
+                  className="nav-link"
+                  href="/#"
+                  onClick={() => {
+                    this.switchPage("addpc");
+                  }}
+                >
                   Add Pc
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/#">
+              <li className="nav-item">
+                <a className="nav-link" href="/#">
                   Link 3
                 </a>
               </li>
