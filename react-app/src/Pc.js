@@ -2,6 +2,7 @@ import React from "react";
 import AddPc from "./pages/AddPc";
 import PcList from "./pages/PcList";
 import "./Pc.css";
+
 export class Pc extends React.Component {
   state = {
     page: "list",

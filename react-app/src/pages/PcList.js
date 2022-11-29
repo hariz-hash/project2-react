@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./PcList.css";
+import * as Icon from "react-bootstrap-icons";
+
 export default class PcList extends Component {
   state = {
     data: [],
@@ -31,11 +33,17 @@ export default class PcList extends Component {
                       </h3>
                       <div className="description">
                         <p>
-                          <i className="bi bi-pc"></i>
-                          {each.pcCase.caseType} &nbsp;
+                          <Icon.Pc color="#70bb0d" size={20} />
+                          &nbsp;
+                          {each.pcCase.caseType}
                           {each.pcCase.motherBoardCompatibility} <br />
+                          <Icon.Memory color="#70bb0d" size={20} /> &nbsp;
                           {each.ram.brand}
-                          {each.ram.series}
+                          {each.ram.series} <br />
+                          <Icon.Fan color="#70bb0d" size={20} /> &nbsp;
+                          {each.coolingSystem.brand}&nbsp;
+                          {each.coolingSystem.series}&nbsp;
+                          {each.coolingSystem.coolingMethod}
                         </p>
                       </div>
                     </div>

@@ -3,6 +3,9 @@
 
   border: 1px solid #4b7406 !important;
 }
+Icon.Pc {
+  color: #4b7406;
+}
 .card-title {
   /* color: #0a4ccf; */
   color: #b7c1de;
