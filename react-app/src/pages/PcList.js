@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./PcList.css";
 export default class PcList extends Component {
   state = {
     data: [],
@@ -18,21 +19,37 @@ export default class PcList extends Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.data.map((each) => {
-          return (
-            <div className="card">
-              <div className="card-body">
-                <h3 className="card-title">
-                  <h3>
-                    {each.pcCase.brand}
-                    {each.pcCase.series}
-                  </h3>
-                </h3>
-                <h1>{each.email}</h1>
-              </div>
-            </div>
-          );
-        })}
+        <div class="container">
+          <div class="row">
+            {this.state.data.map((each) => {
+              return (
+                <div className="col-lg-6 mb-1 ">
+                  <div
+                    className="card mt-3 border border-primary"
+                    key={each._id}
+                  >
+                    <div className="card-body">
+                      <h3 className="card-title">
+                        {each.pcCase.brand}&nbsp;{each.pcCase.series}
+                      </h3>
+                      <div className="description">
+                        <p>
+                          {each.pcCase.caseType} &nbsp;
+                          {each.pcCase.motherBoardCompatibility} <br />
+                          {each.ram.brand}
+                          {each.ram.series}
+                        </p>
+                        <p></p>
+                        <p></p>
+                      </div>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </React.Fragment>
     );
   }

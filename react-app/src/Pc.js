@@ -1,6 +1,7 @@
 import React from "react";
 import AddPc from "./pages/AddPc";
 import PcList from "./pages/PcList";
+import "./Pc.css";
 export class Pc extends React.Component {
   state = {
     page: "list",
@@ -21,10 +22,10 @@ export class Pc extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-expand-sm bg-light">
+        <nav className="navbar navbar-expand-sm">
           <div className="container-fluid">
             <ul className="navbar-nav">
-              <li className="nav-item">
+              <li className="nav-item me-2">
                 <a
                   className="nav-link"
                   href="/#"
@@ -35,7 +36,7 @@ export class Pc extends React.Component {
                   PC
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item me-2">
                 <a
                   className="nav-link"
                   href="/#"
@@ -46,7 +47,7 @@ export class Pc extends React.Component {
                   Add Pc
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item me-2">
                 <a className="nav-link" href="/#">
                   Link 3
                 </a>

@@ -1,0 +1,16 @@
+.nav-link {
+  color: white !important;
+}
+.nav-link:hover {
+  color: #8a1ae5 !important;
+  border-bottom: 1px solid #8a1ae5;
+  margin-right: 5px;
+  letter-spacing: 3px;
+}
+p {
+  color: white;
+}
+.navbar {
+  background-color: #111111 !important;
+  font-size: 20px;
+}
