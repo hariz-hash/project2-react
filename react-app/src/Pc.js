@@ -25,7 +25,10 @@ export class Pc extends React.Component {
         <nav className="navbar navbar-expand-sm">
           <div className="container-fluid">
             <ul className="navbar-nav">
-              <li className="nav-item me-2">
+              <li className="nav-item ms-0 mt-3 me-3 brand">
+                ASSEMBLE <span>X</span>
+              </li>
+              <li className="nav-item m-2">
                 <a
                   className="nav-link"
                   href="/#"
@@ -36,7 +39,7 @@ export class Pc extends React.Component {
                   PC
                 </a>
               </li>
-              <li className="nav-item me-2">
+              <li className="nav-item m-2">
                 <a
                   className="nav-link"
                   href="/#"
@@ -47,11 +50,11 @@ export class Pc extends React.Component {
                   Add Pc
                 </a>
               </li>
-              <li className="nav-item me-2">
+              {/* <li className="nav-item me-2">
                 <a className="nav-link" href="/#">
                   Link 3
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </nav>

@@ -2,8 +2,8 @@
   color: white !important;
 }
 .nav-link:hover {
-  color: #8a1ae5 !important;
-  border-bottom: 1px solid #8a1ae5;
+  color: #70bb0d !important;
+  border-bottom: 2px solid #70bb0d;
   margin-right: 5px;
   letter-spacing: 3px;
 }
@@ -11,6 +11,15 @@ p {
   color: white;
 }
 .navbar {
-  background-color: #111111 !important;
+  background-color: #0f1319 !important;
   font-size: 20px;
+  margin-bottom: 20px;
+}
+.brand {
+  /* border-left: 2px solid #3e6513; */
+  color: white;
+  font-weight: bold;
+}
+span {
+  color: #7024e8;
 }

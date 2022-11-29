@@ -1,13 +1,28 @@
-.card {
-  background-color: blue;
-}
 .card-body {
-  background-color: #111111;
+  background-color: #332a34;
+
+  border: 1px solid #4b7406 !important;
 }
 .card-title {
   /* color: #0a4ccf; */
-  color: white;
+  color: #b7c1de;
 }
+p {
+  color: #b7c1de;
+}
+.btn {
+  background-color: #70bb0d !important;
+  color: white !important;
+}
+.btn:hover {
+  background-color: #3e6513 !important;
+}
+/* .btn:hover{
+  bac
+} */
+/* p {
+  color: #ber6ecbf5;
+} */
 /* .borderline {
   border-style: solid;
   border-color: red;
