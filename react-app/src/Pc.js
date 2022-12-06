@@ -1,5 +1,5 @@
 import React from "react";
-import AddPc from "./pages/AddPc";
+import AddPc from "./pages/Add";
 import PcList from "./pages/PcList";
 import "./Pc.css";
 

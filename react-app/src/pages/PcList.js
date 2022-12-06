@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "./PcList.css";
 import * as Icon from "react-bootstrap-icons";
+import "./PcList.css";
 
-export default class PcList extends Component {
+export class PcList extends Component {
   state = {
     data: [],
   };
-
   BASE_API_URL = "http://localhost:3008/";
 
   async componentDidMount() {
@@ -17,38 +16,40 @@ export default class PcList extends Component {
       data: response.data,
     });
   }
-
   render() {
     return (
       <React.Fragment>
-        <div class="container">
-          <div class="row">
+        <div className="container">
+          <div className="row">
             {this.state.data.map((each) => {
               return (
                 <div className="col-lg-6  ">
                   <div className="card  border-0 mt-3" key={each._id}>
                     <div className="card-body">
-                      <h3 className="card-title">
-                        {each.pcCase.brand}&nbsp;{each.pcCase.series}
-                      </h3>
+                      <h3 className="card-title">{each.pcCase}</h3>
                       <div className="description">
-                        <p>
-                          <Icon.Pc color="#70bb0d" size={20} />
+                        <p></p>
+                        {/* <p>
+                          <Icon.Cpu color="#70bb0d" size={20} />
                           &nbsp;
-                          {each.pcCase.caseType}
-                          {each.pcCase.motherBoardCompatibility} <br />
+                          {each.cpuDetailsId[0].model} <br />
+                          <Icon.GpuCard color="#70bb0d" size={20} />
+                          &nbsp;
+                          {each.gpuDetailsId[0].model}&nbsp;
+                          <br />
                           <Icon.Memory color="#70bb0d" size={20} /> &nbsp;
-                          {each.ram.brand}
-                          {each.ram.series} <br />
-                          <Icon.Fan color="#70bb0d" size={20} /> &nbsp;
-                          {each.coolingSystem.brand}&nbsp;
-                          {each.coolingSystem.series}&nbsp;
-                          {each.coolingSystem.coolingMethod}
-                        </p>
+                          {each.ram} <br />
+                        </p> */}
                       </div>
                     </div>
-                    <button type="button" class="btn rounded-0 ">
-                      Primary
+                    <button
+                      type="button"
+                      className="btn rounded-0 "
+                      onClick={() => {
+                        this.switchPage("details");
+                      }}
+                    >
+                      View more
                     </button>
                   </div>
                 </div>
@@ -60,3 +61,5 @@ export default class PcList extends Component {
     );
   }
 }
+
+export default PcList;
