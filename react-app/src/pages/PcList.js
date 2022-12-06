@@ -28,18 +28,12 @@ export class PcList extends Component {
                     <div className="card-body">
                       <h3 className="card-title">{each.pcCase}</h3>
                       <div className="description">
-                        <p></p>
-                        {/* <p>
-                          <Icon.Cpu color="#70bb0d" size={20} />
-                          &nbsp;
-                          {each.cpuDetailsId[0].model} <br />
-                          <Icon.GpuCard color="#70bb0d" size={20} />
-                          &nbsp;
-                          {each.gpuDetailsId[0].model}&nbsp;
-                          <br />
-                          <Icon.Memory color="#70bb0d" size={20} /> &nbsp;
-                          {each.ram} <br />
-                        </p> */}
+                        <p>CPU case - {each.pcCase}</p>
+                        <p>Ram - {each.ram}</p>
+                        <p>Cooling System - {each.coolingSystem}</p>
+                        <p>Thermal Compound - {each.thermalCompund}</p>
+                        <p>SSD - {each.SSD}</p>
+                        <p>Operating System - {each.operatingSystem}</p>
                       </div>
                     </div>
                     <button

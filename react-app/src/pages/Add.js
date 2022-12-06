@@ -50,9 +50,8 @@ export class Add extends Component {
       ram: this.state.ram,
       coolingSystem: this.state.coolingSystem,
       thermalCompund: this.state.thermalCompound,
-      ssd: this.state.ssd,
-      os: this.state.os,
-      email: this.state.email,
+      SSD: this.state.ssd,
+      operatingSystem: this.state.os,
     });
     console.log(response);
 
@@ -64,23 +63,6 @@ export class Add extends Component {
     });
   };
 
-  // addNew = async () => {
-  //   const newRecipe = {
-  //     title: this.state.newRecipeTitle,
-  //     ingredients: this.state.newRecipeIngredients.split(","),
-  //   };
-
-  //   const response = await axios.post(this.BASE_API_URL + "recipes", newRecipe);
-
-  //   newRecipe._id = response.data.insertedId;
-
-  //   const modified = [...this.state.data, newRecipe];
-
-  //   this.setState({
-  //     data: modified,
-  //     page: "list",
-  //   });
-  // };
   render() {
     return (
       <React.Fragment>
@@ -158,7 +140,7 @@ export class Add extends Component {
               name="email"
             />
           </div>
-          <div className="selectDropdown mt-4 pt-2">
+          {/*   <div className="selectDropdown mt-4 pt-2">
             <div className="mt-3">
               <div className="m-2">
                 <select class="form-select" aria-label="Default select example">
@@ -202,8 +184,9 @@ export class Add extends Component {
               <button className="mt-2 btn btn-primary" onClick={this.addNew}>
                 Add New
               </button>
-            </div> */}
-          </div>
+            </div> 
+          </div>*/}
+
           <div className="mt-3">
             <button className="mt-2 btn btn-primary" onClick={this.addNew}>
               Add New
