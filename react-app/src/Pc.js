@@ -2,6 +2,8 @@ import React from "react";
 import AddPc from "./pages/Add";
 import PcList from "./pages/PcList";
 import "./Pc.css";
+import DashBoard from "./pages/DashBoard";
+import Add from "./pages/Add.js";
 
 export class Pc extends React.Component {
   state = {
@@ -12,7 +14,9 @@ export class Pc extends React.Component {
     if (this.state.page === "list") {
       return <PcList />;
     } else if (this.state.page === "addpc") {
-      return <AddPc />;
+      return <Add />;
+    } else if (this.state.page === "DashBoard") {
+      return <DashBoard />;
     }
   };
   switchPage = (newPage) => {
@@ -45,10 +49,32 @@ export class Pc extends React.Component {
                   className="nav-link"
                   href="/#"
                   onClick={() => {
+                    this.switchPage("DashBoard");
+                  }}
+                >
+                  Dashboard
+                </a>
+              </li>
+              <li className="nav-item m-2">
+                <a
+                  className="nav-link"
+                  href="/#"
+                  onClick={() => {
                     this.switchPage("addpc");
                   }}
                 >
                   Add Pc
+                </a>
+              </li>
+              <li className="nav-item m-2">
+                <a
+                  className="nav-link"
+                  href="/#"
+                  onClick={() => {
+                    this.switchPage("addpc");
+                  }}
+                >
+                  Your Pc
                 </a>
               </li>
               {/* <li className="nav-item me-2">

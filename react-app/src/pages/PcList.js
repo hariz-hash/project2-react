@@ -6,7 +6,11 @@ import "./PcList.css";
 export class PcList extends Component {
   state = {
     data: [],
+    viewMore: false,
+    pass: "",
+    pcId: null,
   };
+
   BASE_API_URL = "http://localhost:3008/";
 
   async componentDidMount() {
@@ -16,32 +20,58 @@ export class PcList extends Component {
       data: response.data,
     });
   }
+  viewMore = async () => {
+    const response = await axios.get(
+      this.BASE_API_URL + "pc/638ae6f4bce20d5272bfc750"
+    );
+    this.setState({
+      data: response.data,
+      viewMore: true,
+    });
+  };
   render() {
+    if (this.state.viewMore) {
+      return (
+        <React.Fragment>
+          <div className="container">
+            <div className="row">adw</div>
+          </div>
+        </React.Fragment>
+      );
+    }
     return (
       <React.Fragment>
         <div className="container">
           <div className="row">
             {this.state.data.map((each) => {
+              let x = each._id;
               return (
                 <div className="col-lg-6  ">
                   <div className="card  border-0 mt-3" key={each._id}>
                     <div className="card-body">
                       <h3 className="card-title">{each.pcCase}</h3>
                       <div className="description">
-                        <p>CPU case - {each.pcCase}</p>
+                        <React.Fragment>{each._id}</React.Fragment>
+                        {/* <p>CPU model - {each.cpuDetailsId[0].model}</p>
+                        <p>GPU model - {each.gpuDetailsId[0].model}</p>
+                        <p>
+                          MotherBoard details -
+                          {each.motherBoardDetailsId[0].formFactor} ,
+                          {each.motherBoardDetailsId[0].chipsetType} ,
+                          {each.motherBoardDetailsId[0].model}
+                        </p> */}
                         <p>Ram - {each.ram}</p>
+                        <p>SSD - {each.SSD}</p>
+                        <p>CPU case - {each.pcCase}</p>
                         <p>Cooling System - {each.coolingSystem}</p>
                         <p>Thermal Compound - {each.thermalCompund}</p>
-                        <p>SSD - {each.SSD}</p>
                         <p>Operating System - {each.operatingSystem}</p>
                       </div>
                     </div>
                     <button
                       type="button"
                       className="btn rounded-0 "
-                      onClick={() => {
-                        this.switchPage("details");
-                      }}
+                      onClick={this.viewMore}
                     >
                       View more
                     </button>
@@ -53,6 +83,12 @@ export class PcList extends Component {
         </div>
       </React.Fragment>
     );
+
+    // if (this.state.viewMore) {
+    //   return (
+
+    //   );
+    // }
   }
 }
 

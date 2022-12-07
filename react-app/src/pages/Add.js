@@ -6,7 +6,9 @@ export class Add extends Component {
     gpu: [],
     cpu: [],
     motherBoard: [],
-    pcCase: "",
+    cpuId: [],
+    gpuId: "",
+    motherBoardId: "",
     ram: "",
     coolingSystem: "",
     thermalCompound: "",
@@ -52,6 +54,9 @@ export class Add extends Component {
       thermalCompund: this.state.thermalCompound,
       SSD: this.state.ssd,
       operatingSystem: this.state.os,
+      cpuDetailsId: this.state.cpuDetailsId,
+      gpuDetailsId: this.state.gpuDetailsId,
+      motherBoardId: this.state.motherBoardId,
     });
     console.log(response);
 
@@ -140,53 +145,48 @@ export class Add extends Component {
               name="email"
             />
           </div>
-          {/*   <div className="selectDropdown mt-4 pt-2">
-            <div className="mt-3">
-              <div className="m-2">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Select a CPU</option>
-                  {this.state.cpu.map((each) => (
-                    <option value={each._id}>
-                      {each.model}&nbsp; {each.cpuSocket}&nbsp;
-                      {each.cpuSpeed}
-                      GHZ&nbsp; Threads: {each.threads}&nbsp; Cores:{" "}
-                      {each.cores}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            <div className="mt-3">
-              <div className="m-2">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Select a </option>
-                  {this.state.gpu.map((each) => (
-                    <option value={each._id}>
-                      {each.model}&nbsp;{each.cpuSocket}&nbsp;
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            <div className="mt-3">
-              <div className="m-2">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Select a Mother Board</option>
-                  {this.state.motherBoard.map((each) => (
-                    <option value={each._id}>
-                      {each.chipsetType}&nbsp; {each.model}&nbsp;
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            {/* <div className="mt-3">
-              <button className="mt-2 btn btn-primary" onClick={this.addNew}>
-                Add New
-              </button>
-            </div> 
-          </div>*/}
 
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="cpuId"
+            value={this.state.cpuId}
+            onChange={this.updateFormField}
+          >
+            <option selected>Select a Cpu</option>
+
+            {this.state.cpu.map((each) => {
+              return <option value={each._id}>{each.model}</option>;
+            })}
+          </select>
+          <br />
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="gpuId"
+            value={this.state.gpuId}
+            onChange={this.updateFormField}
+          >
+            <option selected>Select a Gpu</option>
+
+            {this.state.gpu.map((each) => {
+              return <option value={each._id}>{each.model}</option>;
+            })}
+          </select>
+          <br />
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            name="motherBoardId"
+            value={this.state.motherBoardId}
+            onChange={this.updateFormField}
+          >
+            <option selected>Select a Mother Board</option>
+
+            {this.state.motherBoard.map((each) => {
+              return <option value={each._id}>{each.model}</option>;
+            })}
+          </select>
           <div className="mt-3">
             <button className="mt-2 btn btn-primary" onClick={this.addNew}>
               Add New
