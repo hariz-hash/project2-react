@@ -4,6 +4,7 @@ import PcList from "./pages/PcList";
 import "./Pc.css";
 import DashBoard from "./pages/DashBoard";
 import Add from "./pages/Add.js";
+import Edit from "./pages/Edit.js";
 
 export class Pc extends React.Component {
   state = {
@@ -12,11 +13,13 @@ export class Pc extends React.Component {
 
   renderPage = () => {
     if (this.state.page === "list") {
-      return <PcList />;
+      return <PcList switchPage={this.switchPage} />;
     } else if (this.state.page === "addpc") {
       return <Add switchPage={this.switchPage} />;
     } else if (this.state.page === "DashBoard") {
-      return <DashBoard />;
+      return <DashBoard switchPage={this.switchPage} />;
+    } else if (this.state.page === "Edit") {
+      return <Edit />;
     }
   };
   switchPage = (newPage) => {

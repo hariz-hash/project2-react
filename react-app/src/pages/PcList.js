@@ -31,6 +31,13 @@ export class PcList extends Component {
       viewMore: true,
     });
   };
+  goBack = async () => {
+    this.props.switchPage("list");
+    this.setState({
+      viewMore: false,
+    });
+  };
+
   render() {
     if (this.state.viewMore) {
       return (
@@ -64,9 +71,9 @@ export class PcList extends Component {
                       <button
                         type="button"
                         className="btn rounded-0 "
-                        onClick={this.viewMore}
+                        onClick={() => this.goBack()}
                       >
-                        View more
+                        Back{" "}
                       </button>
                     </div>
                   </div>
