@@ -26,17 +26,9 @@ export default class DashBoard extends Component {
     this.setState({
       data: response.data,
       searchPressed: true,
-    }); // console.log(response);
-
-    // this.props.switchPage("DashBoard");
+    });
   };
   render() {
-    // if (this.state.isLoggedIn) {
-    //   return <Details />;
-    // }
-    // return <Add />;
-
-    // return <React.Fragment>add</React.Fragment>;
     if (this.state.searchPressed) {
       return (
         <React.Fragment>
@@ -46,7 +38,6 @@ export default class DashBoard extends Component {
               style={{ background: "#332a34", color: "green" }}
             >
               <thead>
-                aAFAFAFAFAFAWF
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">PC SPECS</th>
@@ -123,6 +114,7 @@ export default class DashBoard extends Component {
     );
   }
 }
+
 /* <div className="container rounded-1">
           <table
             className="table"

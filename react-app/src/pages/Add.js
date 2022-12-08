@@ -6,7 +6,7 @@ export class Add extends Component {
     gpu: [],
     cpu: [],
     motherBoard: [],
-    cpuId: [],
+    cpuId: "",
     gpuId: "",
     motherBoardId: "",
     ram: "",
@@ -19,29 +19,27 @@ export class Add extends Component {
   BASE_API_URL = "http://localhost:3008/";
 
   async componentDidMount() {
-    // const response = await axios.get(this.BASE_API_URL + "pc");
-    // console.log(response.data);
-    // this.setState({
-    //   data: response.data,
-    // });
-    const response = await axios.get(this.BASE_API_URL + "user/harp@gmail.com");
+    const response = await axios.get(this.BASE_API_URL + "pc");
+    console.log(response.data);
     this.setState({
       data: response.data,
     });
+    // const response = await axios.get(this.BASE_API_URL + "user/harp@gmail.com");
+    // this.setState({
+    //   data: response.data,
+    // });
     const responseCpu = await axios.get(this.BASE_API_URL + "cpu");
     console.log(responseCpu.data);
     this.setState({
       cpu: responseCpu.data,
     });
     const responseGpu = await axios.get(this.BASE_API_URL + "gpu");
-    console.log(responseGpu.data);
     this.setState({
       gpu: responseGpu.data,
     });
     const responseMotherBoard = await axios.get(
       this.BASE_API_URL + "motherBoard"
     );
-    console.log(responseMotherBoard.data);
     this.setState({
       motherBoard: responseMotherBoard.data,
     });
@@ -54,13 +52,14 @@ export class Add extends Component {
       thermalCompund: this.state.thermalCompound,
       SSD: this.state.ssd,
       operatingSystem: this.state.os,
-      cpuDetailsId: this.state.cpuDetailsId,
-      gpuDetailsId: this.state.gpuDetailsId,
+      cpuDetailsIdedit: this.state.cpuId,
+      gpuDetailsIdedit: this.state.gpuId,
       motherBoardId: this.state.motherBoardId,
+      email: this.state.email,
     });
     console.log(response);
 
-    this.props.switchPage("DashBoard");
+    this.props.switchPage("list");
   };
   updateFormField = (e) => {
     this.setState({
@@ -156,6 +155,7 @@ export class Add extends Component {
             <option selected>Select a Cpu</option>
 
             {this.state.cpu.map((each) => {
+              // console.log(each._id);
               return <option value={each._id}>{each.model}</option>;
             })}
           </select>

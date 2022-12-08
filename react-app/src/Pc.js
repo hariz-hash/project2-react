@@ -14,7 +14,7 @@ export class Pc extends React.Component {
     if (this.state.page === "list") {
       return <PcList />;
     } else if (this.state.page === "addpc") {
-      return <Add />;
+      return <Add switchPage={this.switchPage} />;
     } else if (this.state.page === "DashBoard") {
       return <DashBoard />;
     }
