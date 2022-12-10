@@ -1,6 +1,35 @@
 import React, { Component } from "react";
-
+import axios from "axios";
 export class Edit extends Component {
+  state = {
+    pcId: null,
+    // page: "dashBoard",
+    data: [],
+    pcById: [],
+  };
+  BASE_API_URL = "http://localhost:3008/";
+
+  async componentDidMount() {
+    const response = await axios.get(this.BASE_API_URL + "pc");
+    // response.data[0].SSD);
+    console.log();
+
+    this.setState({
+      data: response.data,
+    });
+  }
+
+  Update = async (id) => {
+    const responseSinglePc = await axios.put(
+      this.BASE_API_URL + "pc/" + this.props.name
+    );
+    this.setState({
+      pcById: responseSinglePc.data,
+    });
+    console.log(responseSinglePc.data._id);
+    console.log(this.state.pcId);
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -16,7 +45,8 @@ export class Edit extends Component {
               //   value={this.state.pcCase}
               //   onChange={this.updateFormField}
               name="pcCase"
-            />
+            />{" "}
+            const id = {this.props.name};
           </div>
           <div className="m-2">
             <label className="m-2">Ram:</label>
@@ -80,7 +110,7 @@ export class Edit extends Component {
           </div>
 
           <div className="mt-3">
-            <button className="mt-2 btn btn-primary" onClick={this.addNew}>
+            <button className="mt-2 btn btn-primary" onClick={this.Update}>
               Update
             </button>
           </div>

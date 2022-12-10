@@ -27,6 +27,7 @@ export class Pc extends React.Component {
       page: newPage,
     });
   };
+
   render() {
     return (
       <React.Fragment>
