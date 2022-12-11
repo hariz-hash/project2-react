@@ -38,7 +38,7 @@ export class Table extends Component {
   renderPage = () => {
     if (this.state.page === "showEdit") {
       //   console.log("test");
-      return <Edit name={[this.state.pcId]} />;
+      return <Edit id={[this.state.pcId]} />;
     }
   };
   render() {
@@ -63,13 +63,7 @@ export class Table extends Component {
                     <th scope="row">1</th>
                     <td>
                       <p>CPU case - {each.pcCase}</p>
-                      <input
-                        className="form-control"
-                        type="text"
-                        value={this.state.email}
-                        onChange={this.updateFormField}
-                        name="email"
-                      />
+
                       <p>CPU model - {each.cpuDetailsId[0].model}</p>
                       <p>Ram - {each.ram}</p>
                       <p>Cooling System - {each.coolingSystem}</p>
