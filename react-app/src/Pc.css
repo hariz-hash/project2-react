@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap");
 .nav-link {
   color: white !important;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 3px;
 }
 .nav-link:hover {
   color: #70bb0d !important;
   border-bottom: 2px solid #70bb0d;
   margin-right: 5px;
-  letter-spacing: 3px;
 }
 p {
   color: white;

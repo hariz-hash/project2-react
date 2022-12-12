@@ -5,6 +5,7 @@ import "./Pc.css";
 import DashBoard from "./pages/DashBoard";
 import Add from "./pages/Add.js";
 import Edit from "./pages/Edit.js";
+import Home from "./pages/Home.js";
 
 export class Pc extends React.Component {
   state = {
@@ -20,6 +21,8 @@ export class Pc extends React.Component {
       return <DashBoard switchPage={this.switchPage} />;
     } else if (this.state.page === "Edit") {
       return <Edit />;
+    } else if (this.state.page === "home") {
+      return <Home />;
     }
   };
   switchPage = (newPage) => {
@@ -34,8 +37,16 @@ export class Pc extends React.Component {
         <nav className="navbar navbar-expand-sm">
           <div className="container-fluid">
             <ul className="navbar-nav">
-              <li className="nav-item ms-0 mt-3 me-3 brand">
-                ASSEMBLE <span>X</span>
+              <li className="nav-item m-2">
+                <a
+                  className="nav-link"
+                  href="/#"
+                  onClick={() => {
+                    this.switchPage("home");
+                  }}
+                >
+                  ASSEMBLE <span>X</span>
+                </a>
               </li>
               <li className="nav-item m-2">
                 <a
