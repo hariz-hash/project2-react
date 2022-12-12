@@ -15,6 +15,13 @@ export class Add extends Component {
     ssd: "",
     os: "",
     email: "",
+    showRamError: false,
+    showCoolingSystemError: false,
+    showThermalCompoundError: false,
+    showSSDError: false,
+    showOSError: false,
+    showEmailError: false,
+    showPcCaseError: false,
   };
   BASE_API_URL = "http://localhost:3008/";
 
@@ -44,6 +51,7 @@ export class Add extends Component {
       motherBoard: responseMotherBoard.data,
     });
   }
+
   addNew = async () => {
     const response = await axios.post(this.BASE_API_URL + "pc", {
       pcCase: this.state.pcCase,

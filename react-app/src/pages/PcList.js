@@ -96,7 +96,7 @@ export class PcList extends Component {
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
-            Launch demo modal
+            <Icon.Search /> Search
           </button>
 
           <div
@@ -129,7 +129,7 @@ export class PcList extends Component {
                     Close
                   </button>
                   <button type="button" class="btn btn-primary">
-                    Save changes
+                    Search
                   </button>
                 </div>
               </div>

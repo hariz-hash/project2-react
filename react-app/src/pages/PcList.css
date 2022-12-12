@@ -20,6 +20,9 @@ p {
 .btn:hover {
   background-color: #3e6513 !important;
 }
+.modal-content {
+  background-color: #332a34;
+}
 /* .btn:hover{
   bac
 } */
