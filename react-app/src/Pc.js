@@ -70,7 +70,7 @@ export class Pc extends React.Component {
                   Add Pc
                 </a>
               </li>
-              <li className="nav-item m-2">
+              {/* <li className="nav-item m-2">
                 <a
                   className="nav-link"
                   href="/#"
@@ -80,7 +80,7 @@ export class Pc extends React.Component {
                 >
                   Your Pc
                 </a>
-              </li>
+              </li> */}
               {/* <li className="nav-item me-2">
                 <a className="nav-link" href="/#">
                   Link 3

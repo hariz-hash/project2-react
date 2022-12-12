@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import * as Icon from "react-bootstrap-icons";
 import "./PcList.css";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 export class PcList extends Component {
   state = {
@@ -21,6 +23,7 @@ export class PcList extends Component {
       data: response.data,
     });
   }
+
   viewMore = async (id) => {
     const responseSinglePc = await axios.get(
       // this.BASE_API_URL + "pc/638ae6f4bce20d5272bfc750"
@@ -87,6 +90,51 @@ export class PcList extends Component {
     return (
       <React.Fragment>
         <div className="container">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Launch demo modal
+          </button>
+
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Modal title
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="row">
             {this.state.data.map((each) => {
               return (
