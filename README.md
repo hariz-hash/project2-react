@@ -29,3 +29,8 @@ of the world
 1) [Cors](https://www.npmjs.com/package/cors) for  Cross-Origin Resource Sharing
 2) [Express](https://expressjs.com/) framework
 3) [DotNev](https://www.npmjs.com/package/dotenv)
+
+## Deployment
+
+1) [Netlify](https://www.netlify.com/) for frontend deployment
+2) [Render](https://render.com/)
