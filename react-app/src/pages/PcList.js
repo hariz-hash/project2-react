@@ -55,7 +55,10 @@ export class PcList extends Component {
                         <h3 className="card-title">{each.pcCase}</h3>
                         <div className="description">
                           <React.Fragment>let x = {each._id}</React.Fragment>
-                          <p>CPU model - {each.cpuDetailsId[0].model}</p>
+                          <p>
+                            <Icon.Cpu color="green" size="29px" />
+                            {each.cpuDetailsId[0].model}
+                          </p>
                           <p>GPU model - {each.gpuDetailsId[0].model}</p>
                           <p>
                             MotherBoard details -
@@ -92,7 +95,7 @@ export class PcList extends Component {
         <div className="container">
           <button
             type="button"
-            class="btn btn-primary"
+            className="btn btn-primary"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >
@@ -100,35 +103,61 @@ export class PcList extends Component {
           </button>
 
           <div
-            class="modal fade"
+            className="modal fade"
             id="exampleModal"
-            tabindex="-1"
+            tabIndex="-1"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    Modal title
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLabel">
+                    Search Model
                   </h5>
                   <button
                     type="button"
-                    class="btn-close"
+                    className="btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">...</div>
-                <div class="modal-footer">
+                <div className="modal-body">
+                  <input className="form-control" type="text" name="search" />
+                  <input
+                    type="radio"
+                    id="html"
+                    name="fav_language"
+                    value="HTML"
+                  />
+                    <label for="html">CPU model</label>
+                  <br />
+                  <input
+                    type="radio"
+                    id="html"
+                    name="fav_language"
+                    value="HTML"
+                  />
+                    <label for="html">GPU model</label>
+                  <br />
+                  <input
+                    type="radio"
+                    id="html"
+                    name="fav_language"
+                    value="HTML"
+                  />
+                    <label for="html">MotherBoard model</label>
+                  <br />
+                </div>
+                <div className="modal-footer">
                   <button
                     type="button"
-                    class="btn btn-secondary"
+                    className="btn btn-secondary"
                     data-bs-dismiss="modal"
                   >
                     Close
                   </button>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" className="btn btn-primary">
                     Search
                   </button>
                 </div>
@@ -142,22 +171,30 @@ export class PcList extends Component {
                   <div className="card  border-0 mt-3">
                     <div className="card-body">
                       <h3 className="card-title">{each.pcCase}</h3>
-                      <div className="description">
+                      <div className="description mt-4">
                         {/* <React.Fragment>{each._id}</React.Fragment> */}
-                        <p>CPU model {each.cpuDetailsId[0].model}</p>
-                        <p>GPU model - {each.gpuDetailsId[0].model}</p>
                         <p>
-                          MotherBoard details -
+                          <Icon.Cpu color="#70bb0d" size="29px" /> &nbsp;
+                          {each.cpuDetailsId[0].model}
+                        </p>
+                        <p>
+                          {" "}
+                          <Icon.GpuCard color="#70bb0d" size="29px" /> &nbsp;
+                          {each.gpuDetailsId[0].model}
+                        </p>
+                        <p>
+                          <Icon.Motherboard color="#70bb0d" size="29px" />{" "}
+                          &nbsp; MotherBoard details -
                           {each.motherBoardDetailsId[0].formFactor} ,
                           {each.motherBoardDetailsId[0].chipsetType} ,
                           {each.motherBoardDetailsId[0].model}
                         </p>
-                        <p>Ram - {each.ram}</p>
+                        {/* <p>Ram - {each.ram}</p>
                         <p>SSD - {each.SSD}</p>
                         <p>CPU case - {each.pcCase}</p>
                         <p>Cooling System - {each.coolingSystem}</p>
                         <p>Thermal Compound - {each.thermalCompund}</p>
-                        <p>Operating System - {each.operatingSystem}</p>
+                        <p>Operating System - {each.operatingSystem}</p> */}
                       </div>
                     </div>
                     <button

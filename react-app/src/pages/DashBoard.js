@@ -43,8 +43,8 @@ export default class DashBoard extends Component {
     return (
       <React.Fragment>
         <div className="container rounded-1">
-          <div className="m-2">
-            <label className="m-2">Search</label>
+          <div className="input-group mb-3">
+            {/* <label className="m-2">Search</label> */}
             <input
               className="form-control"
               type="text"
@@ -52,10 +52,8 @@ export default class DashBoard extends Component {
               onChange={this.updateFormField}
               name="search"
             />
-          </div>
-          <div className="mt-3">
             <button
-              className="mt-2 btn btn-primary"
+              className="p-2 btn btn-primary"
               onClick={() => this.search(this.state.search, "showTable")}
             >
               Search

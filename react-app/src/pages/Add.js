@@ -79,122 +79,137 @@ export class Add extends Component {
     return (
       <React.Fragment>
         <div
-          className="container p-3"
+          className="container"
           style={{ background: "#332a34", color: "green" }}
         >
-          <div className="m-2">
-            <label className="m-2">PC Case:</label>
-            <input
-              className="form-control"
-              type="text"
-              value={this.state.pcCase}
-              onChange={this.updateFormField}
-              name="pcCase"
-            />
-          </div>
-          <div className="m-2">
-            <label className="m-2">Ram:</label>
-            <input
-              className="form-control"
-              type="text"
-              value={this.state.ram}
-              onChange={this.updateFormField}
-              name="ram"
-            />
-          </div>
-          <div className="m-2">
-            <label className="m-2">Cooling System:</label>
-            <input
-              className="form-control"
-              type="text"
-              value={this.state.coolingSystem}
-              onChange={this.updateFormField}
-              name="coolingSystem"
-            />
-          </div>
-          <div className="m-2">
-            <label className="m-2">Thermal Compound:</label>
-            <input
-              className="form-control"
-              type="text"
-              value={this.state.thermalCompound}
-              onChange={this.updateFormField}
-              name="thermalCompound"
-            />
-          </div>
-          <div className="m-2">
-            <label className="m-2">SSD:</label>
-            <input
-              className="form-control"
-              type="text"
-              value={this.state.ssd}
-              onChange={this.updateFormField}
-              name="ssd"
-            />
-          </div>
-          <div className="m-2">
-            <label className="m-2">Operating System:</label>
-            <input
-              className="form-control"
-              type="text"
-              value={this.state.os}
-              onChange={this.updateFormField}
-              name="os"
-            />
-          </div>
-          <div className="m-2">
-            <label className="m-2">Email:</label>
-            <input
-              className="form-control"
-              type="text"
-              value={this.state.email}
-              onChange={this.updateFormField}
-              name="email"
-            />
+          <div className="row">
+            <div className="col-sm">
+              <div className="m-2">
+                <label className="m-2">PC Case:</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  value={this.state.pcCase}
+                  onChange={this.updateFormField}
+                  name="pcCase"
+                />
+              </div>
+
+              <div className="m-2">
+                <label className="m-2">Ram:</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  value={this.state.ram}
+                  onChange={this.updateFormField}
+                  name="ram"
+                />
+              </div>
+              <div className="m-2">
+                <label className="m-2">Email:</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.updateFormField}
+                  name="email"
+                />
+              </div>
+              <div className="m-2">
+                <label className="m-2">Operating System:</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  value={this.state.os}
+                  onChange={this.updateFormField}
+                  name="os"
+                />
+              </div>
+            </div>
+            <div className="col-sm">
+              <div className="m-2">
+                <label className="m-2">Cooling System:</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  value={this.state.coolingSystem}
+                  onChange={this.updateFormField}
+                  name="coolingSystem"
+                />
+              </div>
+              <div className="m-2">
+                <label className="m-2">Thermal Compound:</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  value={this.state.thermalCompound}
+                  onChange={this.updateFormField}
+                  name="thermalCompound"
+                />
+              </div>
+              <div className="m-2">
+                <label className="m-2">SSD:</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  value={this.state.ssd}
+                  onChange={this.updateFormField}
+                  name="ssd"
+                />
+              </div>
+              <br />
+            </div>
+            <div className="container mt-4 ">
+              <select
+                className="form-select m-2 p-2"
+                name="gpuId"
+                value={this.state.gpuId}
+                onChange={this.updateFormField}
+              >
+                <option selected>Select a Gpu</option>
+
+                {this.state.gpu.map((each) => {
+                  return <option value={each._id}>{each.model}</option>;
+                })}
+              </select>
+              <select
+                className="form-select m-2 p-2"
+                aria-label="Default select example"
+                name="motherBoardId"
+                value={this.state.motherBoardId}
+                onChange={this.updateFormField}
+              >
+                <option selected>Select a Mother Board</option>
+
+                {this.state.motherBoard.map((each) => {
+                  return <option value={each._id}>{each.model}</option>;
+                })}
+              </select>
+              <select
+                className="form-select m-2 p-2"
+                aria-label="Default select example"
+                name="cpuId"
+                value={this.state.cpuId}
+                onChange={this.updateFormField}
+              >
+                <option selected>Select a Cpu</option>
+
+                {this.state.cpu.map((each) => {
+                  // console.log(each._id);
+                  return <option value={each._id}>{each.model}</option>;
+                })}
+              </select>
+            </div>
           </div>
 
-          <select
-            class="form-select"
-            aria-label="Default select example"
-            name="cpuId"
-            value={this.state.cpuId}
-            onChange={this.updateFormField}
-          >
-            <option selected>Select a Cpu</option>
+          {/*
+      
 
-            {this.state.cpu.map((each) => {
-              // console.log(each._id);
-              return <option value={each._id}>{each.model}</option>;
-            })}
-          </select>
+        
           <br />
-          <select
-            class="form-select"
-            aria-label="Default select example"
-            name="gpuId"
-            value={this.state.gpuId}
-            onChange={this.updateFormField}
-          >
-            <option selected>Select a Gpu</option>
-
-            {this.state.gpu.map((each) => {
-              return <option value={each._id}>{each.model}</option>;
-            })}
-          </select>
+          
           <br />
-          <select
-            class="form-select"
-            aria-label="Default select example"
-            name="motherBoardId"
-            value={this.state.motherBoardId}
-            onChange={this.updateFormField}
-          >
-            <option selected>Select a Mother Board</option>
-
-            {this.state.motherBoard.map((each) => {
-              return <option value={each._id}>{each.model}</option>;
-            })}
-          </select>
+        */}
           <div className="mt-3">
             <button className="mt-2 btn btn-primary" onClick={this.addNew}>
               Add New
