@@ -22,6 +22,7 @@ export class Table extends Component {
       searchPressed: true,
     }); // console.log(response);
     console.log(response);
+    this.props.switchPage("list");
   };
 
   edit = async (pcId, newPage) => {
@@ -39,6 +40,8 @@ export class Table extends Component {
     if (this.state.page === "showEdit") {
       //   console.log("test");
       return <Edit id={[this.state.pcId]} />;
+    } else {
+      <div> NO user</div>;
     }
   };
   render() {
@@ -51,7 +54,6 @@ export class Table extends Component {
           >
             <thead>
               <tr>
-                <th scope="col">#</th>
                 <th scope="col">PC SPECS</th>
                 <th scope="col">Option</th>
               </tr>
@@ -60,7 +62,6 @@ export class Table extends Component {
               {this.props.name.map((each) => {
                 return (
                   <tr key={each._id}>
-                    <th scope="row">1</th>
                     <td>
                       <p>CPU case - {each.pcCase}</p>
 
@@ -104,7 +105,7 @@ export class Table extends Component {
           </table>
         </div>
         {this.renderPage()}
-        <div>adadada</div>
+        {/* <div>adadada</div> */}
       </React.Fragment>
     );
   }

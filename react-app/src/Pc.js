@@ -35,53 +35,59 @@ export class Pc extends React.Component {
     return (
       <React.Fragment>
         <nav className="navbar navbar-expand-sm">
-          <div className="container-fluid">
-            <ul className="navbar-nav">
-              <li className="nav-item m-2">
-                <a
-                  className="nav-link"
-                  href="/#"
-                  onClick={() => {
-                    this.switchPage("home");
-                  }}
-                >
-                  ASSEMBLE <span>X</span>
-                </a>
-              </li>
-              <li className="nav-item m-2">
-                <a
-                  className="nav-link"
-                  href="/#"
-                  onClick={() => {
-                    this.switchPage("list");
-                  }}
-                >
-                  PC
-                </a>
-              </li>
-              <li className="nav-item m-2">
-                <a
-                  className="nav-link"
-                  href="/#"
-                  onClick={() => {
-                    this.switchPage("DashBoard");
-                  }}
-                >
-                  Dashboard
-                </a>
-              </li>
-              <li className="nav-item m-2">
-                <a
-                  className="nav-link"
-                  href="/#"
-                  onClick={() => {
-                    this.switchPage("addpc");
-                  }}
-                >
-                  Add Pc
-                </a>
-              </li>
-              {/* <li className="nav-item m-2">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div className="container-fluid">
+              <ul className="navbar-nav">
+                <li className="nav-item m-2">
+                  <a className="nav-link" href="/#">
+                    ASSEMBLE <span>X</span>
+                  </a>
+                </li>
+                <li className="nav-item m-2">
+                  <a
+                    className="nav-link"
+                    href="/#"
+                    onClick={() => {
+                      this.switchPage("list");
+                    }}
+                  >
+                    PC
+                  </a>
+                </li>
+                <li className="nav-item m-2">
+                  <a
+                    className="nav-link"
+                    href="/#"
+                    onClick={() => {
+                      this.switchPage("DashBoard");
+                    }}
+                  >
+                    Dashboard
+                  </a>
+                </li>
+                <li className="nav-item m-2">
+                  <a
+                    className="nav-link"
+                    href="/#"
+                    onClick={() => {
+                      this.switchPage("addpc");
+                    }}
+                  >
+                    Add Pc
+                  </a>
+                </li>
+                {/* <li className="nav-item m-2">
                 <a
                   className="nav-link"
                   href="/#"
@@ -92,12 +98,13 @@ export class Pc extends React.Component {
                   Your Pc
                 </a>
               </li> */}
-              {/* <li className="nav-item me-2">
+                {/* <li className="nav-item me-2">
                 <a className="nav-link" href="/#">
                   Link 3
                 </a>
               </li> */}
-            </ul>
+              </ul>
+            </div>
           </div>
         </nav>
         {this.renderPage()}

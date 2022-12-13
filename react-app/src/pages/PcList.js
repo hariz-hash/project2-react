@@ -54,24 +54,51 @@ export class PcList extends Component {
                       <div className="card-body">
                         <h3 className="card-title">{each.pcCase}</h3>
                         <div className="description">
-                          <React.Fragment>let x = {each._id}</React.Fragment>
                           <p>
-                            <Icon.Cpu color="green" size="29px" />
+                            <Icon.Cpu color="#70bb0d" size="29px" /> &nbsp;
                             {each.cpuDetailsId[0].model}
                           </p>
-                          <p>GPU model - {each.gpuDetailsId[0].model}</p>
                           <p>
-                            MotherBoard details -
+                            {" "}
+                            <Icon.GpuCard color="#70bb0d" size="29px" /> &nbsp;
+                            GPU model - {each.gpuDetailsId[0].model}
+                          </p>
+                          <p>
+                            <Icon.Motherboard color="#70bb0d" size="29px" />{" "}
+                            &nbsp; MotherBoard details -
                             {each.motherBoardDetailsId[0].formFactor} ,
                             {each.motherBoardDetailsId[0].chipsetType} ,
                             {each.motherBoardDetailsId[0].model}
                           </p>
-                          <p>Ram - {each.ram}</p>
-                          <p>SSD - {each.SSD}</p>
-                          <p>CPU case - {each.pcCase}</p>
-                          <p>Cooling System - {each.coolingSystem}</p>
-                          <p>Thermal Compound - {each.thermalCompund}</p>
-                          <p>Operating System - {each.operatingSystem}</p>
+                          <p>
+                            <Icon.Database color="#70bb0d" size="29px" /> &nbsp;
+                            Ram - {each.ram}
+                          </p>
+                          <p>
+                            {" "}
+                            <Icon.Disc color="#70bb0d" size="29px" /> &nbsp; SSD
+                            - {each.SSD}
+                          </p>
+                          <p>
+                            {" "}
+                            <Icon.PcDisplay color="#70bb0d" size="29px" />{" "}
+                            &nbsp; CPU case - {each.pcCase}
+                          </p>
+                          <p>
+                            {" "}
+                            <Icon.Fan color="#70bb0d" size="29px" /> &nbsp;
+                            Cooling System - {each.coolingSystem}
+                          </p>
+                          <p>
+                            {" "}
+                            <Icon.Stickies color="#70bb0d" size="29px" /> &nbsp;
+                            Thermal Compound - {each.thermalCompund}
+                          </p>
+                          <p>
+                            {" "}
+                            <Icon.Window color="#70bb0d" size="29px" /> &nbsp;
+                            Operating System - {each.operatingSystem}
+                          </p>
                         </div>
                       </div>
                       <button
@@ -102,7 +129,7 @@ export class PcList extends Component {
             <Icon.Search /> Search
           </button>
 
-          <div
+          {/* <div
             className="modal fade"
             id="exampleModal"
             tabIndex="-1"
@@ -163,7 +190,7 @@ export class PcList extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="row">
             {this.state.data.map((each) => {
               return (

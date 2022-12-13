@@ -74,6 +74,8 @@ export class Edit extends Component {
 
     console.log(responseSinglePc.data._id);
     console.log(this.state.pcId);
+    this.props.switchPage("list");
+    alert("Items updated");
   };
   updateFormField = (e) => {
     this.setState({

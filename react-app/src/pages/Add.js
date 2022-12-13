@@ -15,6 +15,7 @@ export class Add extends Component {
     ssd: "",
     os: "",
     email: "",
+    pcCase: "",
     showRamError: false,
     showCoolingSystemError: false,
     showThermalCompoundError: false,
@@ -212,7 +213,7 @@ export class Add extends Component {
         */}
           <div className="mt-3">
             <button className="mt-2 btn btn-primary" onClick={this.addNew}>
-              Add New
+              Add
             </button>
           </div>
         </div>

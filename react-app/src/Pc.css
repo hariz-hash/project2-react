@@ -4,6 +4,11 @@
   font-family: "Orbitron", sans-serif;
   letter-spacing: 3px;
 }
+.brand {
+  color: white !important;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 3px;
+}
 .nav-link:hover {
   color: #70bb0d !important;
   border-bottom: 2px solid #70bb0d;
@@ -24,4 +29,7 @@ p {
 }
 span {
   color: #7024e8;
+}
+.navbar-toggler-icon {
+  color: #70bb0d;
 }
