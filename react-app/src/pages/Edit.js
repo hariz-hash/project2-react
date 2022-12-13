@@ -18,7 +18,7 @@ export class Edit extends Component {
     gpuId: "",
     motherBoardId: "",
   };
-  BASE_API_URL = "http://localhost:3008/";
+  BASE_API_URL = "https://hz.onrender.com/";
 
   async componentDidMount() {
     let pcId = this.props.id;

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Edit from "./Edit";
 export class Table extends Component {
-  BASE_API_URL = "http://localhost:3008/";
+  BASE_API_URL = "https://hz.onrender.com/";
   state = {
     search: "",
     searchPressed: false,

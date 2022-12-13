@@ -13,7 +13,7 @@ export class PcList extends Component {
     passId: [],
   };
 
-  BASE_API_URL = "http://localhost:3008/";
+  BASE_API_URL = "https://hz.onrender.com/";
 
   async componentDidMount() {
     const response = await axios.get(this.BASE_API_URL + "pc");
