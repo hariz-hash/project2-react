@@ -23,7 +23,7 @@ export default class DashBoard extends Component {
     });
   };
 
-  BASE_API_URL = "https://hz.onrender.com/";
+  BASE_API_URL = "https://api2-project.onrender.com/";
 
   search = async (userMail, newPage) => {
     const response = await axios.get(this.BASE_API_URL + "user/" + userMail);

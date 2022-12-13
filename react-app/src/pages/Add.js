@@ -23,7 +23,7 @@ export class Add extends Component {
     showEmailError: false,
     showPcCaseError: false,
   };
-  BASE_API_URL = "https://hz.onrender.com/";
+  BASE_API_URL = "https://api2-project.onrender.com/";
 
   async componentDidMount() {
     const response = await axios.get(this.BASE_API_URL + "pc");
