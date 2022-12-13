@@ -29,6 +29,8 @@ Using *Orbitron* to give that robotic fonts that suits with the website theme
 1) [Cors](https://www.npmjs.com/package/cors) for  Cross-Origin Resource Sharing
 2) [Express](https://expressjs.com/) framework
 3) [DotNev](https://www.npmjs.com/package/dotenv)
+4) [Yup](https://www.npmjs.com/package/yup) validation
+    
 
 ## Deployment
 
