@@ -16,7 +16,7 @@ of the world
 
 ### Color scheme
 #### Fonts
-
+Using *Orbitron* to give that robotic fonts that suits with the website theme
 ## Technologies Used
 
 ### Frontend
