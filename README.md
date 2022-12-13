@@ -17,6 +17,16 @@ of the world
 ### Color scheme
 #### Fonts
 Using *Orbitron* to give that robotic fonts that suits with the website theme
+
+1. Interaction between collector and user is limited
+    limitation : 
+         After update and delete and items, need to manually go to the main pc list page to see new entry
+    Future implementation : 
+        - Review section can be added below the details so users can add comments and collectors can reply as well if a question is posted. 
+
+
+---
+
 ## Technologies Used
 
 ### Frontend
