@@ -18,6 +18,7 @@ of the world
 #### Fonts
 Using *Orbitron* to give that robotic fonts that suits with the website theme
 
+## Limitations:
 1. Interaction between collector and user is limited
     limitation : 
          After update and delete and items, need to manually go to the main pc list page to see new entry
