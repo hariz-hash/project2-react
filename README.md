@@ -27,3 +27,5 @@ of the world
 
 ### Backend
 1) [Cors](https://www.npmjs.com/package/cors) for  Cross-Origin Resource Sharing
+2) [Express](https://expressjs.com/) framework
+3) [DotNev](https://www.npmjs.com/package/dotenv)
