@@ -9,3 +9,21 @@ of the world
 ## UI/UX
 ### Strategy
 ### Organisational Goals
+
+
+
+### User Goals
+
+### Color scheme
+#### Fonts
+
+## Technologies Used
+
+### Frontend
+
+1) [React](https://reactjs.org/) for ui interface
+2) [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) add flavor to the website
+3) [Axios](https://github.com/axios/axios) communicate with express
+
+### Backend
+1) [Cors](https://www.npmjs.com/package/cors) for  Cross-Origin Resource Sharing
